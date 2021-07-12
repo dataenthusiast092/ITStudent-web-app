@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+<!--==============Tile Definition for /userhomepages/layout.jsp===========================-->
+    <!--definition for userlayout-->
+    <definition name="userlayout" path="/userhomepages/layout.jsp">
+        <put name="header" value="/userhomepages/header.jsp"/>
+        <put name="navigation" value="/userhomepages/navigation.jsp"/>
+        <put name="body" value="/userhomepages/dashboard.jsp"/>
+        <put name="footer" value="/userhomepages/footer.jsp"/>
+    </definition>
+
+    <!--definition for about us-->
+    <definition name="aboutus_def" extends="userlayout">
+        <put name="body" value="/userhomepages/aboutus.jsp"/>
+    </definition>
+
+    <!--definition for terms & conditions-->
+    <definition name="terms_conditions_def" extends="userlayout">
+        <put name="body" value="/userhomepages/terms_conditions.jsp"/>
+    </definition>
+
+    <!--definition for contact us-->
+    <definition name="contact_us_def" extends="userlayout">
+        <put name="body" value="/userhomepages/contactus.jsp"/>
+    </definition>
+
+    <!--definition for dashboard-->
+    <definition name="dashboard_def" extends="userlayout">
+        <put name="body" value="/userhomepages/dashboard.jsp"/>
+    </definition>
+
+    <!--definition for messages-->
+    <definition name="messages_def" extends="userlayout">
+        <put name="body" value="/userhomepages/messages.jsp"/>
+    </definition>
+
+    <!--definition for saved files-->
+    <definition name="saved_files_def" extends="userlayout">
+        <put name="body" value="/userhomepages/saved_files.jsp"/>
+    </definition>
+
+    <!--definition for upload files-->
+    <definition name="upload_files_def" extends="userlayout">
+        <put name="body" value="/userhomepages/upload_files.jsp"/>
+    </definition>
+
+    <!--definition for notes-->
+    <definition name="notes_def" extends="userlayout">
+        <put name="body" value="/userhomepages/notes.jsp"/>
+    </definition>
+
+    <!--definition for list all-->
+    <definition name="list_all_def" extends="userlayout">
+        <put name="body" value="/userhomepages/list_all.jsp"/>
+    </definition>
+
+    <!--definition for mocktest-->
+    <definition name="mock_test_def" extends="userlayout">
+        <put name="body" value="/userhomepages/mock_test.jsp"/>
+    </definition>
+
+<!--==============Tile Definition for /adminhomepages/layout.jsp===========================-->
+
+    <!--definition for adminlayout-->
+    <definition name="adminlayout" path="/adminhomepages/layout.jsp">
+        <put name="header" value="/adminhomepages/header.jsp"/>
+        <put name="navigation" value="/adminhomepages/navigation.jsp"/>
+        <put name="body" value="/adminhomepages/useraccounts.jsp"/>
+        <put name="footer" value="/adminhomepages/footer.jsp"/>
+    </definition>
+
+    <!--definition for useraccounts-->
+    <definition name="admin_useraccounts_def" extends="adminlayout">
+        <put name="body" value="/adminhomepages/useraccounts.jsp"/>
+    </definition>
+
+    <!--definition for adminlist-->
+    <definition name="admin_adminlist_def" extends="adminlayout">
+        <put name="body" value="/adminhomepages/adminList.jsp"/>
+    </definition>
+
+    <!---->
+    <definition name="admin_savedfiles_def" extends="adminlayout">
+        <put name="body" value="/adminhomepages/saved_files.jsp"/>
+    </definition>
+
+    <!--definition for adminupload-->
+    <definition name="admin_uploadfiles_def" extends="adminlayout">
+        <put name="body" value="/adminhomepages/upload_files.jsp"/>
+    </definition>
+
+    <!--definition for newecourse-->
+    <definition name="admin_createnewe_courses_def" extends="adminlayout">
+        <put name="body" value="/adminhomepages/new_ecourses.jsp"/>
+    </definition>
+
+    <!--definition for listallecourses-->
+    <definition name="admin_listalle_courses_def" extends="adminlayout">
+        <put name="body" value="/adminhomepages/listall_ecourses.jsp"/>
+    </definition>
+
+    <!--definition for mocktest-->
+    <definition name="admin_createmocktest_def" extends="adminlayout">
+        <put name="body" value="/adminhomepages/mocktest.jsp"/>
+    </definition>
+
+    <!--definition for ecoursefiles-->
+    <definition name="admin_insere_course_files_def" extends="adminlayout">
+        <put name="body" value="/adminhomepages/ecourse_files.jsp"/>
+    </definition>
+
+</tiles-definitions>

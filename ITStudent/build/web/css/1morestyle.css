@@ -1,0 +1,21 @@
+#send {
+    background: #3f5a81;
+    width: 35%;
+    border: 5px solid #0F1620;
+    font: bold 15px Verdana, sans-serif;
+    color: #fafafa;
+    text-shadow: 1px 1px 1px #0F1620;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#send:hover {
+    background: #4d76b1;
+    border: 5px solid #253750;
+    color: #fff;
+}
+
+#send:active {
+    text-indent: -10px;
+}

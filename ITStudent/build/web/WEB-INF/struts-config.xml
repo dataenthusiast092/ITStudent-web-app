@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+    <!-- ==========================FormBean Definitions ======================= -->
+    <form-beans>
+        
+        <!-- DynaActionForm Bean for login user-->
+        <form-bean name="loginuserForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="username" type="java.lang.String"/>
+            <form-property name="password" type="java.lang.String"/>
+        </form-bean>
+        <!--DynaActionForm Bean for login admin-->
+        <form-bean name="loginadminForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="username" type="java.lang.String"/>
+            <form-property name="password" type="java.lang.String"/>
+        </form-bean>
+
+        <!-- DynaActionForm Bean for Register -->
+        <form-bean name="registerForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="fname" type="java.lang.String"/>
+            <form-property name="lname" type="java.lang.String"/>
+            <form-property name="dob" type="java.lang.String"/>
+            <form-property name="gender" type="java.lang.String"/>
+            <form-property name="sQ" type="java.lang.String"/>
+            <form-property name="sA" type="java.lang.String"/>
+            <form-property name="username" type="java.lang.String"/>
+            <form-property name="password" type="java.lang.String"/>
+            <form-property name="confpassword" type="java.lang.String"/>
+        </form-bean>
+
+        <!--DynaActionForm Bean for new_ecourses(adminfiles)-->
+        <form-bean name="new_ecourses_admin" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="coursetitle" type="java.lang.String"/>
+            <form-property name="coursedescription" type="java.lang.String"/>
+        </form-bean>
+
+        <!--DynaActionForm Bean for usernotes-->
+        <form-bean name="usernotes" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="notestitle" type="java.lang.String"/>
+            <form-property name="notesdescription" type="java.lang.String"/>
+        </form-bean>
+
+    </form-beans>
+
+    <!-- ========================Global Exception Definitions======================== -->
+    <global-exceptions>   
+    </global-exceptions>
+
+    <!-- ========================Global Forward Definitions========================== -->
+    <global-forwards>
+    </global-forwards>
+
+    <!-- =========================Action Mapping Definitions========================= -->
+    <action-mappings>
+
+        <!--ActionMapping for LoginAction  class-->
+        <action name="loginuserForm" path="/processlogin" scope="session" type="controller.LoginUserAction" validate="false">
+            <forward name="user" path="/userhome.jsp"/>
+            <forward name="fail" path="/welcomeStruts.jsp"/>
+        </action>
+
+        <!--ActionMapping for LoginAdmin  class-->
+        <action name ="loginadminForm" path="/loginadmin" scope="session" type="controller.LoginAdminAction" validate="false">
+            <forward name="admin" path="/adminhome.jsp"/>
+            <forward name="fail" path="/welcomeStruts.jsp"/>
+        </action>
+
+        <!--ActionMapping for RegisterAction  class-->
+        <action name="registerForm" path="/processreg" scope="request" type="controller.RegisterAction" validate="false">
+            <forward name="success" path="/welcomeStruts.jsp"/>
+            <forward name="fail" path="/registration.jsp"/>
+        </action>
+
+        <!--ActionMapping for LinkAction class. Uses Tiles Plugin(see below) to map forward actions.-->
+        <action path="/link" parameter="method" type="controller.LinkAction">
+            <forward name="aboutus_linkaction" path="aboutus_def"/>
+            <forward name="terms_conditions_linkaction" path="terms_conditions_def"/>
+            <forward name="contact_us_linkaction" path="contact_us_def"/>
+            <forward name="dashboard_linkaction" path="dashboard_def"/>
+            <forward name="messages_linkaction" path="messages_def"/>
+            <forward name="saved_files_linkaction" path="saved_files_def"/>
+            <forward name="upload_files_linkaction" path="upload_files_def"/>
+            <forward name="notes_linkaction" path="notes_def"/>
+            <forward name="list_all_linkaction" path="list_all_def"/>
+            <forward name="mock_test_linkaction" path="mock_test_def"/>
+            <forward name="admin_useraccounts_linkaction" path="admin_useraccounts_def"/>
+            <forward name="admin_adminlist_linkaction" path="admin_adminlist_def"/>
+            <forward name="admin_savedfiles_linkaction" path="admin_savedfiles_def"/>
+            <forward name="admin_uploadfiles_linkaction" path="admin_uploadfiles_def"/>
+            <forward name="admin_createnewe_courses_linkaction" path="admin_createnewe_courses_def"/>
+            <forward name="admin_listalle_courses_linkaction" path="admin_listalle_courses_def"/>
+            <forward name="admin_createmocktest_linkaction" path="admin_createmocktest_def"/>
+        </action>
+
+        <!--ActionMapping for NewcourseadminAction  class-->
+        <action name="new_ecourses_admin" path="/processecourseadmin" scope="session" type="controller.NewcourseadminAction" validate="false">
+            <forward name="success" path="admin_createnewe_courses_def"/>
+            <forward name="fail" path="admin_createnewe_courses_def"/>
+        </action>
+
+        <!--ActionMapping for UsernotesAction  class-->
+        <action name="usernotes" path="/processusernotes" scope="session" type="controller.UsernotesAction" validate="false">
+            <forward name="success" path="notes_def"/>
+            <forward name="fail" path="notes_def"/>
+        </action>
+
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+    
+    <!-- =====================Message Resources Definitions=========================== -->
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>
+    
+    <!-- =========================== Tiles plugin =====================================-->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================== Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+</struts-config>

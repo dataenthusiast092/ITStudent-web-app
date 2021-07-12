@@ -1,0 +1,159 @@
+#fname {
+    background: #FFEC8B;
+    width: 60%;
+    border: 2px solid #0F1620;
+    font: bold 15px Verdana, sans-serif;
+    color: #0F1620;
+    text-shadow: 1px 1px 1px #0F1620;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#fname:hover {
+    background: #FEF1B5;
+    border: 2px solid #253750;
+    color: #CD950C;
+}
+
+#lname {
+    background: #FFEC8B;
+    width: 60%;
+    border: 2px solid #0F1620;
+    font: bold 15px Verdana, sans-serif;
+    color: #0F1620;
+    text-shadow: 1px 1px 1px #0F1620;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#lname:hover {
+    background: #FEF1B5;
+    border: 2px solid #253750;
+    color: #CD950C;
+}
+
+#dob {
+    background: #FFEC8B;
+    width: 60%;
+    border: 2px solid #0F1620;
+    font: bold 15px Verdana, sans-serif;
+    color: #0F1620;
+    text-shadow: 1px 1px 1px #0F1620;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#dob:hover {
+    background: #FEF1B5;
+    border: 2px solid #253750;
+    color: #CD950C;
+}
+
+#gender {
+    background: #FFEC8B;
+    width: 60%;
+    border: 2px solid #0F1620;
+    font: bold 15px Verdana, sans-serif;
+    color: #0F1620;
+    text-shadow: 1px 1px 1px #0F1620;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#gender:hover {
+    background: #FEF1B5;
+    border: 2px solid #253750;
+    color: #CD950C;
+}
+
+#sQ {
+    background: #FFEC8B;
+    width: 60%;
+    border: 2px solid #0F1620;
+    font: bold 15px Verdana, sans-serif;
+    color: #0F1620;
+    text-shadow: 1px 1px 1px #0F1620;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#sQ:hover {
+    background: #FEF1B5;
+    border: 2px solid #253750;
+    color: #CD950C;
+}
+
+#sA {
+    background: #FFEC8B;
+    width: 60%;
+    border: 2px solid #0F1620;
+    font: bold 15px Verdana, sans-serif;
+    color: #0F1620;
+    text-shadow: 1px 1px 1px #0F1620;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#sA:hover {
+    background: #FEF1B5;
+    border: 2px solid #253750;
+    color: #CD950C;
+}
+
+#username {
+    background: #FFEC8B;
+    width: 60%;
+    border: 2px solid #0F1620;
+    font: bold 15px Verdana, sans-serif;
+    color: #0F1620;
+    text-shadow: 1px 1px 1px #0F1620;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#username:hover {
+    background: #FEF1B5;
+    border: 2px solid #253750;
+    color: #CD950C;
+}
+#password {
+    background: #FFEC8B;
+    width: 60%;
+    border: 2px solid #0F1620;
+    font: bold 15px Verdana, sans-serif;
+    color: #0F1620;
+    text-shadow: 1px 1px 1px #0F1620;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#password:hover {
+    background: #FEF1B5;
+    border: 2px solid #253750;
+    color: #CD950C;
+}
+#confpassword {
+    background: #FFEC8B;
+    width: 60%;
+    border: 2px solid #0F1620;
+    font: bold 15px Verdana, sans-serif;
+    color: #0F1620;
+    text-shadow: 1px 1px 1px #0F1620;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#confpassword:hover {
+    background: #FEF1B5;
+    border: 2px solid #253750;
+    color: #CD950C;
+}

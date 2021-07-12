@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+    <global>
+
+        <!-- An example global constant
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+        end example-->
+
+    </global>
+
+    <formset>
+        <form name="/processlogin">
+            <field property="username" depends="required">
+                <arg key="loginForm.username"/>
+            </field>
+            <field property="password" depends="required,mask">
+                <arg key="loginForm.password"/>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[0-9a-zA-Z]*$</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="/processreg">
+            <field property="fname" depends="required">
+                <arg key="registerForm.fname"/>
+            </field>
+            <field property="lname" depends="required">
+                <arg key="registerForm.lname"/>
+            </field>
+            <field property="dob" depends="required,date">
+                <arg key="registerForm.dob"/>
+                <var>
+                    <var-name>datePatern</var-name>
+                    <var-value>MM-dd-yy</var-value>
+                </var>
+            </field>
+            <field property="gender" depends="required">
+                <arg key="registerForm.gender"/>
+            </field>
+            <field property="sQ" depends="required">
+                <arg key="registerForm.sQ"/>
+            </field>
+            <field property="sA" depends="required">
+                <arg key="registerForm.sA"/>
+            </field>
+            <field property="username" depends="required">
+                <arg key="registerForm.username"/>
+            </field>
+            <field property="password" depends="required">
+                <arg key="registerForm.password"/>
+            </field>
+            <field property="confpassword" depends="required">
+                <arg key="registerForm.confpassword"/>
+            </field>
+        </form>
+    </formset>
+
+</form-validation>
